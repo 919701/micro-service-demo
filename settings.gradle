@@ -1,0 +1,5 @@
+rootProject.name = "micro-service-demo"
+
+includeBuild 'licensing-service'
+includeBuild 'config-server'
+

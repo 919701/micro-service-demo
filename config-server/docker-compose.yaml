@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  config-server:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - '8888:8888'

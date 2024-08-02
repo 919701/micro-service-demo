@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: licensing-service
+  config:
+    import: 'optional:configserver:'
+  cloud:
+    config:
+      fail-fast: true
+      uri: http://localhost:8888
+
+logging:
+  level:
+    root: INFO
+
+server:
+  port: 8080
+management:
+  endpoints:
+    web:
+      base-path: /monitor
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    env:
+      enabled: true
+#logging:
+#  pattern:
+#    console: "%C{1.} [%-5level] %d{dd-MM-yyyy HH:mm:ss} - %msg%n"
